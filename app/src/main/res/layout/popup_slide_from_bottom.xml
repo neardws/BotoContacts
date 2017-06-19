@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/click_to_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+        <LinearLayout
+            android:id="@+id/popup_anima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="?colorPrimary"
+            android:layout_alignParentBottom="true"
+            >
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow>
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp"
+                        android:textColor="@color/white"
+                        android:text="@string/contact"
+                        android:layout_margin="15dp"
+                        android:paddingLeft="10dp"
+                        android:layout_span="7"
+                        android:layout_column="1" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/show_info"
+                        android:id="@+id/show_info"
+                        android:layout_column="21"
+                        android:layout_marginTop="10dp" />
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/share"
+                        android:background="@drawable/share"
+                        android:layout_column="25"
+                        android:layout_marginTop="10dp" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/delete"
+                        android:id="@+id/delete"
+                        android:layout_column="35"
+                        android:layout_marginTop="10dp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phoneType"
+                        android:textColor="@color/white"
+                        android:text="@string/type_main"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp" />
+                    <TextView
+                        android:id="@+id/phoneNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="13237671280"
+                        android:textColor="?colorAccent"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="5"
+                        android:layout_marginLeft="5dp" />
+
+
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/send_message"
+                        android:id="@+id/send_message"
+                        android:layout_column="25" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/call_phone"
+                        android:id="@+id/call_phone"
+                        android:layout_column="35" />
+
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phoneType1"
+                        android:textColor="@color/white"
+                        android:text="@string/type_work"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="10dp" />
+                    <TextView
+                        android:id="@+id/phoneNum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_number"
+                        android:textColor="?colorAccent"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="5"
+                        android:layout_marginLeft="5dp" />
+
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/send_message"
+                        android:id="@+id/send_message1"
+                        android:layout_column="25" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/call_phone"
+                        android:id="@+id/call_phone1"
+                        android:layout_column="35" />
+
+
+                </TableRow>
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phoneType2"
+                        android:textColor="@color/white"
+                        android:text="@string/type_home"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="1"
+                        android:layout_marginLeft="15dp" />
+                    <TextView
+                        android:id="@+id/phoneNum2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_number"
+                        android:textColor="?colorAccent"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="5"
+                        android:layout_marginLeft="5dp" />
+
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/send_message"
+                        android:id="@+id/send_message2"
+                        android:layout_column="25" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/call_phone"
+                        android:id="@+id/call_phone2"
+                        android:layout_column="35" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/phoneType3"
+                        android:textColor="@color/white"
+                        android:text="@string/type_mobile"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="1"
+                        android:layout_marginLeft="15dp" />
+                    <TextView
+                        android:id="@+id/phoneNum3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phone_number"
+                        android:textColor="?colorAccent"
+                        android:textSize="25sp"
+                        android:paddingLeft="10dp"
+                        android:layout_column="5"
+                        android:layout_marginLeft="5dp" />
+
+
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/send_message"
+                        android:id="@+id/send_message3"
+                        android:layout_column="25" />
+
+                    <Button
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/call_phone"
+                        android:id="@+id/call_phone3"
+                        android:layout_column="35" />
+
+
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.ContactDetailActivity"
+    tools:showIn="@layout/activity_contact_detail">
+    <ScrollView android:id="@+id/svProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/name"
+                android:id="@+id/etName"
+                android:hint="@string/name"
+                android:textColor="?colorAccent"
+                android:textSize="35sp"
+                android:focusable="false"
+                android:textIsSelectable="false"
+                android:layout_marginLeft="5dp"
+                android:background="@null" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_edit"
+                android:background="@drawable/edit_black"
+                android:layout_alignBaseline="@+id/delete"
+                android:layout_alignBottom="@+id/delete"
+                android:layout_toStartOf="@+id/delete" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/delete"
+                android:background="@drawable/delete_black"
+                android:layout_marginEnd="70dp"
+                android:layout_alignBaseline="@+id/etName"
+                android:layout_alignBottom="@+id/etName"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nick_name"
+                android:id="@+id/tvNickName"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignBottom="@+id/etNickName"
+                android:layout_alignStart="@+id/etName"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etNickName"
+                android:text="@string/nick_name"
+                android:hint="@string/nick_name"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvNickName"
+                android:layout_below="@+id/etName"
+                android:layout_alignEnd="@+id/delete"
+                android:inputType="text"
+                android:background="@null"
+                android:focusable="false"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvIm"
+                android:text="@string/im"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etNickName"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etIm"
+                android:text="@string/im"
+                android:hint="@string/im"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etNickName"
+                android:layout_toEndOf="@+id/tvIm"
+                android:gravity="center"
+                android:layout_alignEnd="@+id/etNickName"
+                android:focusable="false"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCompany"
+                android:text="@string/company"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etIm"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etCompany"
+                android:text="@string/company"
+                android:hint="@string/company"
+                android:focusable="false"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etIm"
+                android:layout_toRightOf="@id/tvCompany"
+                android:layout_alignEnd="@+id/delete"
+                android:inputType="text"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvNote"
+                android:text="@string/note"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etCompany"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etNote"
+                android:text="@string/note"
+                android:hint="@string/note"
+                android:focusable="false"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@id/tvNote"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@id/etCompany"
+                android:gravity="center"
+                android:inputType="text"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPhoneType"
+                android:text="@string/type_main"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etNote"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPhoneNum"
+                android:inputType="phone"
+                android:focusable="false"
+                android:text="@string/phone_number"
+                android:hint="@string/phone_number"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvPhoneType"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etNote"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPhoneType1"
+                android:text="@string/type_work"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etPhoneNum"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPhoneNum1"
+                android:focusable="false"
+                android:inputType="phone"
+                android:text="@string/phone_number"
+                android:hint="@string/phone_number"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvPhoneType1"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etPhoneNum"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPhoneType2"
+                android:text="@string/type_home"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etPhoneNum1"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPhoneNum2"
+                android:inputType="phone"
+                android:focusable="false"
+                android:text="@string/phone_number"
+                android:hint="@string/phone_number"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvPhoneType2"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etPhoneNum1"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPhoneType3"
+                android:text="@string/type_mobile"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etPhoneNum2"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPhoneNum3"
+                android:inputType="phone"
+                android:focusable="false"
+                android:text="@string/phone_number"
+                android:hint="@string/phone_number"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvPhoneType3"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etPhoneNum2"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmailType"
+                android:text="@string/type_main"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etPhoneNum3"
+                android:layout_alignStart="@id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmailData"
+                android:inputType="textEmailAddress"
+                android:focusable="false"
+                android:text="@string/email"
+                android:hint="@string/email"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvEmailType"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etPhoneNum3"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmailType1"
+                android:text="@string/type_work"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etEmailData"
+                android:layout_alignStart="@id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmailData1"
+                android:inputType="textEmailAddress"
+                android:focusable="false"
+                android:text="@string/email"
+                android:hint="@string/email"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvEmailType1"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etEmailData"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmailType2"
+                android:text="@string/type_home"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etEmailData1"
+                android:layout_alignStart="@id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmailData2"
+                android:inputType="textEmailAddress"
+                android:focusable="false"
+                android:text="@string/email"
+                android:hint="@string/email"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvEmailType2"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etEmailData1"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvEmailType3"
+                android:text="@string/type_mobile"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/etEmailData2"
+                android:layout_alignStart="@id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmailData3"
+                android:focusable="false"
+                android:inputType="textEmailAddress"
+                android:text="@string/email"
+                android:hint="@string/email"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvEmailType3"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@+id/etEmailData2"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAddressType"
+                android:text="@string/type_main"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etEmailData3"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etAddressData"
+                android:inputType="textPostalAddress"
+                android:focusable="false"
+                android:text="@string/postal_address"
+                android:hint="@string/postal_address"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvAddressType"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@id/etEmailData3"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAddressType1"
+                android:text="@string/type_work"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etAddressData"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etAddressData1"
+                android:inputType="textPostalAddress"
+                android:focusable="false"
+                android:text="@string/postal_address"
+                android:hint="@string/postal_address"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvAddressType1"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@id/etAddressData"
+                android:gravity="center"
+                android:autoText="false"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAddressType2"
+                android:text="@string/type_home"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etAddressData1"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etAddressData2"
+                android:inputType="textPostalAddress"
+                android:focusable="false"
+                android:text="@string/postal_address"
+                android:hint="@string/postal_address"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvAddressType2"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@id/etAddressData1"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAddressType3"
+                android:text="@string/type_other"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/etAddressData2"
+                android:layout_alignStart="@+id/etName"
+                android:layout_margin="5dp" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etAddressData3"
+                android:inputType="textPostalAddress"
+                android:focusable="false"
+                android:text="@string/postal_address"
+                android:hint="@string/postal_address"
+                android:textSize="25sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_toEndOf="@+id/tvAddressType3"
+                android:layout_alignEnd="@+id/delete"
+                android:layout_below="@id/etAddressData2"
+                android:gravity="center"
+                android:background="@null"
+                android:layout_margin="5dp" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_send"
+                android:background="@drawable/send_message_black"
+                android:layout_alignTop="@+id/tvPhoneType"
+                android:layout_toEndOf="@+id/etPhoneNum" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_call"
+                android:background="@drawable/call_phone_black"
+                android:layout_alignTop="@+id/btn_send"
+                android:layout_toEndOf="@+id/btn_send" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_send1"
+                android:background="@drawable/send_message_black"
+                android:layout_alignTop="@+id/tvPhoneType1"
+                android:layout_alignStart="@+id/btn_send" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_call1"
+                android:background="@drawable/call_phone_black"
+                android:layout_alignTop="@+id/btn_send1"
+                android:layout_toEndOf="@+id/btn_send1" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_send2"
+                android:background="@drawable/send_message_black"
+                android:layout_alignTop="@+id/tvPhoneType2"
+                android:layout_toEndOf="@+id/etPhoneNum2" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_call2"
+                android:background="@drawable/call_phone_black"
+                android:layout_alignTop="@+id/btn_send2"
+                android:layout_toEndOf="@+id/btn_send2" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_send3"
+                android:background="@drawable/send_message_black"
+                android:layout_alignBottom="@+id/tvPhoneType3"
+                android:layout_toStartOf="@+id/btn_call2" />
+
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/btn_call3"
+                android:background="@drawable/call_phone_black"
+                android:layout_alignTop="@+id/btn_send3"
+                android:layout_toEndOf="@+id/btn_send3" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

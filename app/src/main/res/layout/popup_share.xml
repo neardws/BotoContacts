@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popup_share"
+    android:background="#8f000000">
+
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_margin="25dp">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="?colorAccent"
+            android:text="@string/share"
+            android:gravity="left|center_vertical"
+            android:textSize="18sp"
+            android:paddingLeft="15dp"
+            />
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#3dd1a5"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+        <ImageView
+            android:layout_height="150dp"
+            android:id="@+id/qr_card"
+            android:layout_width="150dp"
+            android:layout_below="@+id/line"
+            android:layout_centerHorizontal="true">
+        </ImageView>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_wechat"
+            android:background="@mipmap/wechat"
+            android:layout_above="@+id/line"
+            android:onClick="shareWXSceneSession"
+            android:layout_toStartOf="@+id/btn_close" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_close"
+            android:layout_above="@+id/line"
+            android:background="@drawable/delete_black"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.MainActivity">
+    <group>
+        <item
+            android:id="@+id/action_settings"
+            android:orderInCategory="100"
+            android:title="@string/action_settings"
+            android:icon="@drawable/setting"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/action_feedback"
+            android:orderInCategory="100"
+            android:title="@string/action_feedback"
+            android:icon="@drawable/feedback"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/action_qr_card"
+            android:orderInCategory="100"
+            android:title="@string/action_qr_card"
+            android:icon="@drawable/qr_card"
+            app:showAsAction="collapseActionView" />
+        <item
+            android:id="@+id/action_about"
+            android:orderInCategory="100"
+            android:icon="@drawable/about"
+            android:title="@string/action_about"
+            app:showAsAction="collapseActionView" />
+
+    </group>
+</menu>

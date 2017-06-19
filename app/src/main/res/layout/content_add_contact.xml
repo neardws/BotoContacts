@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_contact2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.AddContactActivity"
+    tools:showIn="@layout/activity_add_contact">
+    <ScrollView android:id="@+id/svProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_alignLeft="@+id/tvCompany" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentStart="true"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvNickName"
+                android:layout_below="@+id/tvName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_alignLeft="@+id/tvCompany" />
+
+            <EditText
+                android:id="@+id/etNickName"
+                android:layout_below="@+id/etName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/nick_name"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentStart="true"
+                android:inputType="text" />
+            <TextView
+                android:id="@+id/tvIm"
+                android:layout_below="@+id/etNickName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/etIm"
+                android:layout_below="@+id/etNickName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/im"
+                android:layout_margin="5dp"
+                android:inputType="text" />
+            <TextView
+                android:id="@+id/tvNote"
+                android:layout_below="@+id/etIm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/etNote"
+                android:layout_below="@+id/etIm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/note"
+                android:layout_margin="5dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvCompany"
+                android:layout_below="@id/etNote"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_below="@+id/etNote"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/company"
+                android:layout_margin="5dp"
+                android:inputType="text" />
+
+            <Spinner
+                android:id="@+id/spPhoneType"
+                android:layout_below="@+id/etCompany"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/contact_types"/>
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_toRightOf="@+id/spPhoneType"
+                android:layout_below="@+id/etCompany"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_toRightOf="@+id/spPhoneType"
+                android:layout_below="@+id/etCompany"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/phone"
+                android:layout_margin="5dp"/>
+
+
+            <Spinner
+                android:id="@+id/spEmailType"
+                android:layout_below="@+id/etPhone"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/contact_types"/>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_toRightOf="@+id/spEmailType"
+                android:layout_below="@+id/etPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email"
+                android:layout_alignTop="@+id/tvEmail"
+                android:layout_alignLeft="@+id/tvEmail"
+                android:layout_alignStart="@+id/tvEmail" />
+
+
+            <Spinner
+                android:id="@+id/spAddressType"
+                android:layout_below="@+id/etEmail"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/address_type"/>
+
+            <TextView
+                android:id="@+id/tvAddress"
+                android:layout_toRightOf="@+id/spAddressType"
+                android:layout_below="@+id/etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_toRightOf="@+id/spAddressType"
+                android:layout_below="@+id/etEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:hint="@string/postal_address"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/but_add_contact_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAddress"
+                android:layout_centerHorizontal="true"
+                android:text="@string/more"/>
+            <RelativeLayout
+                android:id="@+id/more_to_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etAddress"
+                android:visibility="invisible">
+                <Spinner
+                    android:id="@+id/spPhoneType2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/contact_types"/>
+
+                <TextView
+                    android:id="@+id/tvPhone2"
+                    android:layout_toRightOf="@+id/spPhoneType2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/etPhone2"
+                    android:layout_toRightOf="@+id/spPhoneType2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="@string/phone"
+                    android:layout_margin="5dp"/>
+                <Spinner
+                    android:id="@+id/spEmailType2"
+                    android:layout_below="@+id/etPhone2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/contact_types"/>
+
+                <TextView
+                    android:id="@+id/tvEmail2"
+                    android:layout_toRightOf="@+id/spEmailType2"
+                    android:layout_below="@+id/etPhone2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"/>
+                <EditText
+                    android:id="@+id/etEmail2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email"
+                    android:layout_alignTop="@+id/tvEmail2"
+                    android:layout_alignLeft="@+id/tvEmail2"
+                    android:layout_alignStart="@+id/tvEmail2" />
+
+
+                <Spinner
+                    android:id="@+id/spAddressType2"
+                    android:layout_below="@+id/etEmail2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/address_type"/>
+
+                <TextView
+                    android:id="@+id/tvAddress2"
+                    android:layout_toRightOf="@+id/spAddressType2"
+                    android:layout_below="@+id/etEmail2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"/>
+
+                <EditText
+                    android:id="@+id/etAddress2"
+                    android:layout_toRightOf="@+id/spAddressType2"
+                    android:layout_below="@+id/etEmail2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:hint="@string/postal_address"
+                    android:layout_margin="5dp"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
